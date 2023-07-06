@@ -84,7 +84,7 @@ orders = []
 orderBlocs = driver.find_elements(By.CLASS_NAME, "js-order-card")
 print("Found " + str(len(orderBlocs)) + " orders")
 with open('test.csv', 'w', newline='') as csvfile:
-	writer = csv.writer(csvfile, delimiter=' ', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+	writer = csv.writer(csvfile, delimiter=' ', quotechar='|', quoting=csv.QUOTE_MINIMAL) # TODO: Change quotechar to char not in data
 	for orderBloc in orderBlocs:
 		nameBloc = orderBloc.find_element(By.CLASS_NAME, "yohtmlc-item")
 		name = nameBloc.find_element(By.CLASS_NAME, "a-link-normal").text
