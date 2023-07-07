@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
     return const CupertinoApp(
       theme: CupertinoThemeData(brightness: Brightness.light),
       home: CupertinoNavbar(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

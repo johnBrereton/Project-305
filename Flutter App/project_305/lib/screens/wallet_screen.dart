@@ -12,39 +12,10 @@ class WalletScreen extends StatelessWidget {
     // it uses the "primaryColor" from the CupertinoTheme. Try changing the
     // "primaryColor" in the CupertinoTheme below to Colors.green and see how
     // that affects the page.
-    return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(
-        items: [
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          const BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label: 'Settings',
-          ),
-        ],
+    return const CupertinoPageScaffold(
+      child: Center(
+        child: Text("This is the Wallet Screen"),
       ),
-      tabBuilder: (context, index) {
-        switch (index) {
-          case 0:
-            return Center(
-              child: Text(
-                'This is the wallet screen',
-                style: TextStyle(fontSize: 24),
-              ),
-            );
-          case 1:
-            return Center(
-              child: Text(
-                'This is the settings screen',
-                style: TextStyle(fontSize: 24),
-              ),
-            );
-          default:
-            return Container();
-        }
-      },
     );
   }
 }

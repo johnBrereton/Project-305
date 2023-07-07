@@ -1,138 +1,20 @@
 import 'package:flutter/cupertino.dart';
-import 'package:project_305/screens/wallet_screen.dart';
-import 'package:project_305/screens/account_screen.dart';
+import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
-      child: CupertinoListSection.insetGrouped(
-        header: const Text('My Reminders'),
-        children: <CupertinoListTile>[
-          CupertinoListTile.notched(
-            title: const Text('Open pull request'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeGreen,
-            ),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Open pull request');
-                },
-              ),
-            ),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('Push to master'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.systemRed,
-            ),
-            additionalInfo: const Text('Not available'),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('View last commit'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeOrange,
-            ),
-            additionalInfo: const Text('12 days ago'),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Last commit');
-                },
-              ),
-            ),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('Open pull request'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeGreen,
-            ),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Open pull request');
-                },
-              ),
-            ),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('Open pull request'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeGreen,
-            ),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Open pull request');
-                },
-              ),
-            ),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('Open pull request'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeGreen,
-            ),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Open pull request');
-                },
-              ),
-            ),
-          ),
-          CupertinoListTile.notched(
-            title: const Text('Open pull request'),
-            leading: Container(
-              width: double.infinity,
-              height: double.infinity,
-              color: CupertinoColors.activeGreen,
-            ),
-            trailing: const CupertinoListTileChevron(),
-            onTap: () => Navigator.of(context).push(
-              CupertinoPageRoute<void>(
-                builder: (BuildContext context) {
-                  return const _SecondPage(text: 'Open pull request');
-                },
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _SecondPage extends StatelessWidget {
-  const _SecondPage({required this.text});
-
-  final String text;
-
-  @override
-  Widget build(BuildContext context) {
-    return CupertinoPageScaffold(
+    // TRY THIS: Try changing the "return" statement below to return a
+    // CupertinoPageScaffold instead of a Scaffold. Notice that the
+    // CupertinoPageScaffold doesn't have a "backgroundColor" property. Instead,
+    // it uses the "primaryColor" from the CupertinoTheme. Try changing the
+    // "primaryColor" in the CupertinoTheme below to Colors.green and see how
+    // that affects the page.
+    return const CupertinoPageScaffold(
       child: Center(
-        child: Text(text),
+        child: Text("This is the Home Screen"),
       ),
     );
   }
