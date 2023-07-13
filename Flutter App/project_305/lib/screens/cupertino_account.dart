@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:app_settings/app_settings.dart';
 
-class AccountScreen extends StatelessWidget {
-  const AccountScreen({super.key});
+class CupertinoAccount extends StatelessWidget {
+  const CupertinoAccount({super.key});
 
   @override
   Widget build(BuildContext context) {

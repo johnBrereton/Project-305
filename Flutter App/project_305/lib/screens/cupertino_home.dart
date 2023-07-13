@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class CupertinoHome extends StatelessWidget {
+  const CupertinoHome({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +13,7 @@ class HomeScreen extends StatelessWidget {
     // that affects the page.
     return const CupertinoPageScaffold(
       child: Center(
-        child: Text("This is the Home Screen"),
+        child: Text("This is the Home Screen on iOS"),
       ),
     );
   }
