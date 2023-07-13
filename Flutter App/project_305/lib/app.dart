@@ -103,14 +103,6 @@ class _MaterialNavbarState extends State<MaterialNavbar> {
   ];
 
   @override
-  void initState() {
-    super.initState();
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-      systemNavigationBarColor: Color(0xFFF0EDFF), // Set the color of the system bar here
-    ));
-  }
-
-  @override
   Widget build(BuildContext context) {
 
     return Scaffold(
