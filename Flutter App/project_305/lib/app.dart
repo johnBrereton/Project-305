@@ -50,7 +50,7 @@ class CupertinoNavbar extends StatelessWidget {
       tabBar: CupertinoTabBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.home),
+            icon: Icon(CupertinoIcons.bag),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -103,6 +103,14 @@ class _MaterialNavbarState extends State<MaterialNavbar> {
   ];
 
   @override
+  void initState() {
+    super.initState();
+    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      systemNavigationBarColor: Color(0xFFF0EDFF), // Set the color of the system bar here
+    ));
+  }
+
+  @override
   Widget build(BuildContext context) {
 
     return Scaffold(
@@ -115,11 +123,12 @@ class _MaterialNavbarState extends State<MaterialNavbar> {
         },
         backgroundColor: const Color(0xFFF0EDFF),
         indicatorColor: const Color(0xFF6C48FF),
+        surfaceTintColor: Colors.transparent,
         selectedIndex: currentIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.shopping_bag), 
+            icon: Icon(Icons.shopping_bag_outlined),
             label: 'Home',
           ),
           NavigationDestination(
